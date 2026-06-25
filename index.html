@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shafeena ❤️ Shamir | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="music/wedding.mp3" type="audio/mpeg">
+</audio>
+
+
+<div id="splash">
+
+    <div class="splash-overlay"></div>
+
+    <div class="splash-content">
+
+        <p class="allah-text">
+    In The Name Of Allah
+</p>
+
+<div class="couple-title">
+    <div class="bride-name">Shafeena</div>
+
+    <div class="weds-text">weds</div>
+
+    <div class="groom-name">Shamir</div>
+</div>
+
+<p class="invite-text">
+    Cordially Invite You to Our Special Day
+</p>
+
+<button id="openBtn">
+    Tap To Open
+</button>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="particles"></div>
+
+<button id="musicBtn">🎵</button>
+
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+    <div class="bismillah">
+        ﷽
+    </div>
+
+    <p class="subtitle">
+       WE'RE GETTING MARRIED
+    </p>
+
+    <h1 class="couple-name">
+        Shafeena
+        <span>&</span>
+        Shamir
+    </h1>
+
+    <p class="arabic-text">
+    في الدنيا والآخرة
+    </p>
+
+    <p class="marry-text">
+    In this world, and in the next.
+    </p>
+
+   
+    <!-- Scratch Date Reveal -->
+   <div class="scratch-card" onclick="revealDate()">
+    <div class="real-date" id="realDate">
+        11 October 2026
+    </div>
+
+    <div class="scratch-layer" id="scratchLayer">
+        <span class="tap-icon">👆</span>
+        <span>TAP TO REVEAL DATE</span>
+        <span class="sparkle">✨</span>
+    </div>
+</div>
+
+</div>
+</section>
+
+<section class="couple-section">
+
+    <div class="glass-card bride">
+        <img src="images/bride.jpg" alt="">
+        <h2>Shafeena</h2>
+        <p>The Bride</p>
+        <p class="parent-name">D/O T.Sainudeen</p>
+    </div>
+
+    <div class="glass-card groom">
+        <img src="images/groom.jpg" alt="">
+        <h2>Shamir</h2>
+        <p>The Groom</p>
+        <p class="parent-name">S/O Subair</p>
+    </div>
+
+</section>
+
+<section class="countdown-section">
+
+    <h2>Countdown To Nikah</h2>
+
+    <div class="countdown">
+
+        <div class="box">
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="rsvp-section" id="rsvp">
+
+    <h2>Will You Attend?</h2>
+
+    <p class="rsvp-text">
+        We would be delighted to celebrate our special day with you.
+    </p>
+
+    <div class="rsvp-buttons">
+
+    <button class="rsvp-btn yes-btn"
+            onclick="window.location.href='yes.html'">
+        Yes, Insha Allah
+    </button>
+
+    <button class="rsvp-btn no-btn"
+            onclick="window.location.href='no.html'">
+        Unfortunately, I Can't Make It
+    </button>
+
+</div>
+
+</section>
+
+
+
+<section class="story">
+
+    <img src="images/storyline.jpg" class="story-image">
+
+    <div class="story-text">
+        <h2>Welcome!</h2>
+
+        <p>
+            We warmly invite you to celebrate our Nikah day with us. We look forward to sharing this beautiful and unforgettable occasion with our loved ones.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="wedding-details">
+
+    <div class="details-card">
+
+        <!-- Arabic -->
+        <h2 class="bismillah-title">
+            إِنْ شَاءَ ٱللَّٰهُ
+        </h2>
+<!-- Mehandi Card -->
+    <div class="detail-card">
+
+        <img src="images/mehendi-icon.png"
+             alt="Mehandi"
+             class="detail-icon">
+
+        <div class="detail-text">
+            <h3>MEHANDI</h3>
+
+            <p>SATURDAY</p>
+
+            <p>OCTOBER 10, 2026</p>
+        </div>
+
+    </div>
+
+    <!-- Nikah Card -->
+    <div class="detail-card">
+
+        <img src="images/nikah-icon.png"
+             alt="Nikah"
+             class="detail-icon">
+
+        <div class="detail-text">
+
+            <h3>NIKAH</h3>
+
+            <p>SUNDAY</p>
+
+            <p>OCTOBER 11, 2026</p>
+
+            <p>Hijri 1448, 30 Rabi-ul-Akhir</p>
+
+        </div>
+
+    </div>
+
+    <!-- Venue -->
+    <h2 class="venue-title">
+        The Venue
+    </h2>
+
+    <img src="images/hall.jpg"
+         alt="Wedding Hall"
+         class="venue-image">
+
+    <div class="venue-address">
+
+        <h3>Taj Palace</h3>
+
+        <p>
+            AKS Layout,<br>
+            Mattur Main Road,<br>
+            Urgadur,<br>
+            Shivamogga – 577203,<br>
+            Karnataka
+        </p>
+
+    </div>
+
+   <div class="map-container">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.975394658616!2d75.57392697593588!3d13.900418886507111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbba9f0eb037063%3A0x9233f7c26464eee!2sTaj%20palec!5e0!3m2!1sen!2sin!4v1781959962910!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+</section>
+
+<section class="blessing-section" id="blessing">
+    <h2>Leave a Blessing</h2>
+
+    <p class="blessing-subtitle">
+        Share your heartfelt wishes and duas for our new journey together.
+    </p>
+
+    <form id="blessingForm">
+        <input
+            type="text"
+            id="guestName"
+            placeholder="Your Name"
+            required
+        >
+
+        <textarea
+            id="guestWish"
+            placeholder="Your Wish"
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Share Blessing
+        </button>
+    </form>
+
+    <p id="blessingMessage"></p>
+</section>
+
+
+<footer>
+
+    <h2>A note from us</h2>
+
+    <p>
+        "Every love story is beautiful, but ours is our favorite. We are so greatful to have you in our lives & we can't wait to celebrate this special chapter with you by our side".   
+    </p>
+
+<p>
+Your presence is the greatest gift we could ask for. Let's make memories that will last a lifetime.
+</p>
+
+    <h3>
+        Shafeena ❤️ Shamir
+    </h3>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
