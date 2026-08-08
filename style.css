@@ -1219,6 +1219,204 @@ couple-title{
         font-size:1rem;
     }
 }
+/* ==========================================
+   SAVE THE DATE VIDEO
+========================================== */
+
+.save-date-video-section {
+    position: relative;
+    padding: 110px 20px;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at top,
+            #1a1a1a 0%,
+            #080808 60%,
+            #000 100%
+        );
+    overflow: hidden;
+}
+
+/* Decorative gold glow */
+
+.save-date-video-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(212,175,55,.18),
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+.save-date-video-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.save-date-small {
+    color: #F7E7A1;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.save-date-video-section h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: 400;
+    color: #D4AF37;
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px rgba(212,175,55,.4),
+        0 0 30px rgba(212,175,55,.2);
+}
+
+.save-date-subtitle {
+    color: #ddd;
+    font-size: 1.3rem;
+    margin: 0 auto 45px;
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+/* Video container */
+
+.save-date-video {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 6px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #D4AF37,
+            #F7E7A1,
+            #B8860B,
+            #D4AF37
+        );
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.25),
+        0 20px 50px rgba(0,0,0,.5);
+}
+
+/* Video */
+
+.save-date-video video {
+    display: block;
+
+    width: 100%;
+
+    max-height: 600px;
+
+    border-radius: 20px;
+
+    background: #000;
+
+    object-fit: contain;
+}
+
+/* Date */
+
+.save-date-date {
+    margin-top: 35px;
+
+    color: #F7E7A1;
+
+    font-size: 1.5rem;
+
+    letter-spacing: 8px;
+
+    font-weight: 600;
+}
+
+/* Couple names */
+
+.save-date-names {
+    margin-top: 10px;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 3.5rem;
+
+    color: #D4AF37;
+}
+
+.save-date-names span {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .save-date-video-section {
+        padding: 75px 15px;
+    }
+
+    .save-date-small {
+        font-size: .75rem;
+        letter-spacing: 3px;
+    }
+
+    .save-date-video-section h2 {
+        font-size: 3.2rem;
+    }
+
+    .save-date-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .save-date-video {
+        padding: 4px;
+        border-radius: 18px;
+    }
+
+    .save-date-video video {
+        border-radius: 14px;
+        width: 100%;
+        max-height: 500px;
+    }
+
+    .save-date-date {
+        margin-top: 25px;
+        font-size: 1.1rem;
+        letter-spacing: 5px;
+    }
+
+    .save-date-names {
+        font-size: 2.5rem;
+    }
+
+}
 /* =========================
    FOOTER
 ========================= */
