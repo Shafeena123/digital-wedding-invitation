@@ -123,6 +123,58 @@ musicBtn.addEventListener("click", () => {
 });
 
 // ==========================================
+// SAVE THE DATE VIDEO - MUSIC CONTROL
+// ==========================================
+
+const saveDateVideo =
+    document.getElementById("saveDateVideo");
+
+if (saveDateVideo && music) {
+
+    // When the Save the Date video starts playing
+    saveDateVideo.addEventListener("play", () => {
+
+        // Remember whether website music was playing
+        saveDateVideo.wasMusicPlaying = !music.paused;
+
+        // Pause website background music
+        music.pause();
+
+        // Update music button
+        musicBtn.innerHTML = "🔇";
+    });
+
+
+    // When the video is paused
+    saveDateVideo.addEventListener("pause", () => {
+
+        // Don't resume music if the video has ended
+        if (!saveDateVideo.ended) {
+
+            if (saveDateVideo.wasMusicPlaying) {
+
+                music.play().catch(() => {});
+
+                musicBtn.innerHTML = "🎵";
+            }
+        }
+    });
+
+
+    // When the video finishes
+    saveDateVideo.addEventListener("ended", () => {
+
+        if (saveDateVideo.wasMusicPlaying) {
+
+            music.play().catch(() => {});
+
+            musicBtn.innerHTML = "🎵";
+        }
+    });
+
+}
+
+// ==========================================
 // COUNTDOWN TIMER
 // ==========================================
 
@@ -484,6 +536,7 @@ document.querySelectorAll(
     });
 
 });
+
 // ==========================================
 // LEAVE A BLESSING
 // ==========================================
@@ -533,5 +586,22 @@ blessingForm.addEventListener("submit", async (e) => {
             "❌ Unable to submit blessing.";
 
     }
+
+});
+// ==========================================
+// SAVE THE DATE VIDEO ANIMATION
+// ==========================================
+
+gsap.from(".save-date-video-content", {
+
+    scrollTrigger: {
+        trigger: ".save-date-video-section",
+        start: "top 80%"
+    },
+
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out"
 
 });
