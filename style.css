@@ -74,7 +74,7 @@ body{
     letter-spacing:2px;
 }
 
-couple-title{
+.couple-title{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1739,4 +1739,201 @@ footer h3{
         right:15px;
         bottom:15px;
     }
+}
+/* =========================================
+   FINAL MOBILE ALIGNMENT FIX
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* ---------- SPLASH SCREEN ---------- */
+
+    .splash-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 12px;
+        text-align: center;
+    }
+
+    .couple-title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    .bride-name,
+    .groom-name {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(3rem, 14vw, 4rem);
+        line-height: 1;
+        color: #ffffff;
+
+        margin: 0;
+    }
+
+    .weds-text {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(1.5rem, 7vw, 2rem);
+        line-height: 1;
+        color: #F7E7A1;
+
+        margin: 8px 0;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        width: 100%;
+        min-height: 100svh;
+        padding: 20px 15px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .couple-name {
+        width: 100%;
+        text-align: center;
+
+        font-size: clamp(3rem, 14vw, 4rem) !important;
+        line-height: 1.05;
+        margin: 10px auto;
+    }
+
+    .couple-name span {
+        display: block;
+        font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
+        line-height: 1;
+        margin: 3px 0;
+    }
+
+
+    /* ---------- SAVE THE DATE ---------- */
+
+    .save-date-video-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    .save-date-date {
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+        letter-spacing: 4px;
+    }
+
+    .save-date-names {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        gap: 5px;
+
+        white-space: nowrap;
+        text-align: center;
+
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(2.4rem, 11vw, 3.2rem);
+        line-height: 1;
+    }
+
+    .save-date-names span {
+        flex-shrink: 0;
+
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+
+        margin: 0;
+        line-height: 1;
+    }
+
+
+    /* ---------- COUNTDOWN ---------- */
+
+    .countdown {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        overflow-x: hidden;
+        padding: 0;
+    }
+
+    .box {
+        width: calc((100vw - 55px) / 4) !important;
+        max-width: 90px;
+        height: 90px !important;
+        flex-shrink: 1;
+    }
+
+    .box span {
+        font-size: 1.8rem !important;
+        margin-bottom: 3px;
+    }
+
+    .box small {
+        font-size: 9px !important;
+    }
+
+
+    /* ---------- RSVP ---------- */
+
+    .rsvp-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .rsvp-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+
+    /* ---------- WEDDING DETAILS ---------- */
+
+    .wedding-details {
+        width: calc(100% - 30px);
+        margin: 60px auto;
+        padding: 30px 15px;
+    }
+
+    .detail-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer h3 {
+        white-space: nowrap;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
 }
