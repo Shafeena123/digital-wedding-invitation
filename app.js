@@ -15,12 +15,41 @@ const musicBtn = document.getElementById("musicBtn");
 const urlParams = new URLSearchParams(window.location.search);
 
 if (urlParams.get("skipSplash") === "true") {
+
+    // Hide splash immediately
     splash.style.display = "none";
 
-// Try to play music automatically
+    // Restore music
     if (sessionStorage.getItem("musicAllowed") === "true") {
         music.play().catch(() => {});
     }
+
+    // Wait until the page has rendered, then go to RSVP
+    window.addEventListener("load", () => {
+
+         setTimeout(() => {
+
+            const savedPosition =
+                sessionStorage.getItem("invitationScrollPosition");
+
+            if (savedPosition !== null) {
+
+                window.scrollTo({
+                    top: parseInt(savedPosition, 10),
+                    behavior: "instant"
+                });
+
+                // Remove it after restoring
+                sessionStorage.removeItem(
+                    "invitationScrollPosition"
+                );
+
+            }
+
+        }, 200);
+
+    });
+
 }
 
 openBtn.addEventListener("click", () => {
@@ -41,6 +70,22 @@ openBtn.addEventListener("click", () => {
     music.play().catch(() => {});
 
 });
+
+// ==========================================
+// SAVE EXACT SCROLL POSITION BEFORE RSVP
+// ==========================================
+
+function goToRSVPPage(page) {
+
+    // Save the exact position where the guest is
+    sessionStorage.setItem(
+        "invitationScrollPosition",
+        window.scrollY
+    );
+
+    // Go to Yes / No page
+    window.location.href = page;
+}
 // ==========================================
 // DATE REVEAL
 // ==========================================
